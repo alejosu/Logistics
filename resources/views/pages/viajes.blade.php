@@ -29,7 +29,7 @@
                             @foreach ($viajes as $viaje)
                                 <tr>
                                     <td>{{ $viaje->id }}</td>
-                                    <td>{{ $viaje->cliente->nombre }}</td>
+                                    <td>{{ $solicitud->cliente->nombre }}</td>
                                     <td>{{ $viaje->mercancia }}</td>
                                     <td>{{ $viaje->cantidad }}</td>
                                     <td>{{ $viaje->estado }}</td>

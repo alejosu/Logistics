@@ -10,15 +10,15 @@
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('crearCliente') }}">
                         {{ csrf_field() }}
                         
-                        <div class="form-group{{ $errors->has('id') ? ' has-error' : '' }}">
-                            <label for="id" class="col-md-4 control-label">Identificación</label>
+                        <div class="form-group{{ $errors->has('nit') ? ' has-error' : '' }}">
+                            <label for="nit" class="col-md-4 control-label">Identificación</label>
 
                             <div class="col-md-6">
-                                <input id="id" type="text" class="form-control" name="id" value="{{ old('id') }}" required autofocus>
+                                <input id="nit" type="text" class="form-control" name="nit" value="{{ old('nit') }}" required autofocus>
 
-                                @if ($errors->has('id'))
+                                @if ($errors->has('nit'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('id') }}</strong>
+                                        <strong>{{ $errors->first('nit') }}</strong>
                                     </span>
                                 @endif
                             </div>

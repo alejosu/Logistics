@@ -17,7 +17,7 @@ class ClienteController extends Controller
     {
         
         $this->validate($request, [
-            'id'        => 'required|unique:clientes|max:12|min:6',
+            'nit'        => 'required|unique:clientes|max:12|min:6',
             'nombre'    => 'required',
             'telefono'  => 'required',
             'direccion' => 'required',
@@ -26,7 +26,7 @@ class ClienteController extends Controller
         ]);
 
         Cliente::create([
-            'id'        => $request->id,
+            'nit'       => $request->nit,
             'nombre' 	=> $request->nombre,
             'telefono' 	=> $request->telefono,
             'direccion' => $request->direccion,
