@@ -37,7 +37,9 @@ class viajesController extends Controller
             'origen'		=> 'required',
             'destino'		=> 'required',
             'medida'		=> 'required',
-            'destinatario'	=> 'required',           
+            'destinatario'	=> 'required', 
+            'dir_origen'    => 'required',
+            'dir_destino'   => 'required'          
         ]);
 
         $solicitud  = Solicitud::where('id', $id)->first();
@@ -55,10 +57,12 @@ class viajesController extends Controller
             'medida'        => $request->medida,
             'destinatario'  => $destinatario->nombre,
             'estado'        => 'Creado',
-            'id_solicitud'  => $solicitud->id          
+            'id_solicitud'  => $solicitud->id,
+            'dir_origen'    => $request->dir_origen,
+            'dir_destino'   => $request->dir_destino          
         ]);
 
-        return redirect('solicitudes/' . $solicitud->id . '/viajes');
+        return redirect('solicitud/' . $solicitud->id . '/viajes');
     }
 
     protected function newViaje(Request $request, $id)
@@ -71,5 +75,23 @@ class viajesController extends Controller
         $medidas    = Medida::All();
 
         return view('pages.crearViaje', compact('estados', 'vehiculos', 'solicitud', 'destinatario', 'ciudades', 'medidas'));
+    }
+
+    protected function editar()
+    {
+        $estados = Estado::all();
+
+        return view('editarViaje');
+    }
+
+    protected function cambiarEstado(Request $request, $id)
+    {
+        $viaje = Viaje::where('id', $id)->first();
+
+        $viaje->estado = $request->estado;
+
+        $viaje->save();
+
+        return redirect('solicitud/' . $viaje->id_solicitud . '/viajes');
     }
 }

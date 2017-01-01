@@ -19,7 +19,9 @@ class Viaje extends Model
         'medida',
         'destinatario',
         'estado',
-        'id_solicitud'
+        'id_solicitud',
+        'dir_origen',
+        'dir_destino'
     ];
     
     public function solicitud()

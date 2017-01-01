@@ -65,6 +65,9 @@ Route::post('solicitud/{id}/cambiar', 'SolicitudesController@cambiar')->middlewa
 Route::get('solicitud/{id}/viajes', 'ViajesController@viajes')->middleware('auth');
 Route::get('solicitud/{id}/crearViaje', 'ViajesController@newViaje')->middleware('auth');
 Route::post('solicitud/{id}/crearViaje', 'ViajesController@create')->middleware('auth');
+Route::get('solicitud/{id}/Viaje/{idViaje}', 'ViajesController@editar')->middleware('auth');
+Route::post('viaje/{id}/cambiarEstado', 'ViajesController@cambiarEstado')->middleware('auth');
+
 
 Route::get('crearHistorial/{id_vehiculo}', 'HistorialController@newHistorial')->middleware('auth');
 Route::post('crearHistorial/{id_vehiculo}', 'HistorialController@create')->middleware('auth');

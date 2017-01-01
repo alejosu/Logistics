@@ -102,6 +102,20 @@
                             </div>
                         </div>
 
+                        <div class="form-group{{ $errors->has('dir_origen') ? ' has-error' : '' }}">
+                            <label for="dir_origen" class="col-md-4 control-label">Dir</label>
+
+                            <div class="col-md-6">
+                                <input id="dir_origen" type="text"  class="form-control" name="dir_origen" value="{{ old('dir_origen') }}" required autofocus>
+
+                                @if ($errors->has('dir_origen'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('dir_origen') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
                         <div class="form-group{{ $errors->has('destino') ? ' has-error' : '' }}">
                             <label for="destino" class="col-md-4 control-label">Destino</label>
 
@@ -115,6 +129,20 @@
                                 @if ($errors->has('destino'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('destino') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group{{ $errors->has('dir_destino') ? ' has-error' : '' }}">
+                            <label for="dir_destino" class="col-md-4 control-label">Dir</label>
+
+                            <div class="col-md-6">
+                                <input id="dir_destino" type="text"  class="form-control" name="dir_destino" value="{{ old('dir_destino') }}" required autofocus>
+
+                                @if ($errors->has('dir_destino'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('dir_destino') }}</strong>
                                     </span>
                                 @endif
                             </div>

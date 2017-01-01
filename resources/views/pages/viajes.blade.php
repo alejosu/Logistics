@@ -34,9 +34,9 @@
                                     <td>{{ $viaje->fecha_salida }}</td>
                                     <td>{{ $viaje->fecha_entrega }}</td>
                                     <td>{{ $viaje->manifiesto }}</td>
-                                    <td>{{ $viaje->vehiculo }}</td>
-                                    <td>{{ $viaje->origen }}</td>
-                                    <td>{{ $viaje->destino }}</td>
+                                    <td>{{ $viaje->placa }}</td>
+                                    <td>{{ $viaje->origen }} - {{ $viaje->dir_origen }}</td>
+                                    <td>{{ $viaje->destino }} - {{ $viaje->dir_destino }}</td>
                                     <td>{{ $viaje->medida }}</td>
                                     <td>{{ $viaje->destinatario }}</td>
                                     <td>{{ $viaje->estado }}</td>
