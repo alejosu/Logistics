@@ -53,7 +53,7 @@ class viajesController extends Controller
             'origen'        => $request->origen,
             'destino'       => $request->destino,
             'medida'        => $request->medida,
-            'destinatario'  => $destinatario->id,
+            'destinatario'  => $destinatario->nombre,
             'estado'        => 'Creado',
             'id_solicitud'  => $solicitud->id          
         ]);

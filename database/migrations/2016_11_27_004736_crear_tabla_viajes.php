@@ -28,6 +28,8 @@ class CrearTablaViajes extends Migration
             $table->string('medida');
             $table->string('destinatario');
             $table->string('estado');
+            $table->string('dir_origen');
+            $table->string('dir_destino');
             $table->timestamps();
 
             $table->foreign('id_solicitud')->references('id')->on('solicitudes');

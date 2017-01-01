@@ -11,11 +11,11 @@
                     <table class="table table-condensed table-hover">
                         <thead>
                             <th>Id</th>
+                            <th>Solicitud</th>
                             <th>Cantidad</th>
                             <th>Fecha entrega</th>
                             <th>Fecha salida</th>
                             <th>Manifiesto</th>
-                            <th>Solicitud</th>
                             <th>Vehiculo</th>
                             <th>Origen</th>
                             <th>Destino</th>
@@ -29,9 +29,16 @@
                             @foreach ($viajes as $viaje)
                                 <tr>
                                     <td>{{ $viaje->id }}</td>
-                                    <td>{{ $solicitud->cliente->nombre }}</td>
-                                    <td>{{ $viaje->mercancia }}</td>
+                                    <td>{{ $solicitud->id }}</td>
                                     <td>{{ $viaje->cantidad }}</td>
+                                    <td>{{ $viaje->fecha_salida }}</td>
+                                    <td>{{ $viaje->fecha_entrega }}</td>
+                                    <td>{{ $viaje->manifiesto }}</td>
+                                    <td>{{ $viaje->vehiculo }}</td>
+                                    <td>{{ $viaje->origen }}</td>
+                                    <td>{{ $viaje->destino }}</td>
+                                    <td>{{ $viaje->medida }}</td>
+                                    <td>{{ $viaje->destinatario }}</td>
                                     <td>{{ $viaje->estado }}</td>
                                     <td>{{ $viaje->created_at }}</td>
                                 </tr>
