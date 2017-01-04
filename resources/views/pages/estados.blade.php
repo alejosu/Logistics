@@ -11,7 +11,7 @@
                         <thead>
                             <th>Id</th>
                             <th>Descripción</th>
-                            <th><a href="crearEstado" class="btn btn-primary pull-right">Crear Estado</a></th>
+                            <th><a href="crearEstado" class="btn btn-primary btn-xs pull-right">Crear</a></th>
                         </thead>
                         <tbody>
                             @foreach ($estados as $estado)

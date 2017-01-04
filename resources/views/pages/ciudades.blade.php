@@ -11,7 +11,7 @@
                         <thead>
                             <th>Id</th>
                             <th>Nombre</th>
-                            <th><a href="crearCiudad" class="btn btn-primary pull-right">Crear Ciudad</a></th>
+                            <th><a href="crearCiudad" class="btn btn-primary btn-xs pull-right">Crear</a></th>
                         </thead>
                         <tbody>
                             @foreach ($ciudades as $ciudad)

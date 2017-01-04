@@ -11,7 +11,6 @@
                         <thead>
                             <th>Id</th>
                             <th>Nombre</th>
-                            <th>Email</th>
                             <th>Cliente</th>
                         </thead>
                         <tbody>
@@ -19,8 +18,8 @@
                                 <tr>
                                     <td>{{ $usuario->id }}</td>
                                     <td>{{ $usuario->name }}</td>
-                                    <td>{{ $usuario->email }}</td>
                                     <td>{{ $usuario->cliente->nombre }}</td>
+                                    <td><a class="btn btn-xs btn-success pull-right" href="borrarusuario/{{ $usuario->id }}">Editar</a></td>
                                     <td><a class="btn btn-xs btn-danger pull-right" href="borrarusuario/{{ $usuario->id }}">Borrar</a></td>
                                 </tr>
                             @endforeach

@@ -7,11 +7,11 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Listado de Medidas</div>
                 <div class="panel-body">
+                    <a href="crearMedida" class="btn btn-primary btn-xs pull-right">Crear</a>
                     <table class="table table-condensed table-hover">
                         <thead>
                             <th>Id</th>
                             <th>Descripcion</th>
-                            <th><a href="crearMedida" class="btn btn-primary btn-sm pull-right">Crear Medida</a></th>
                         </thead>
                         <tbody>
                             @foreach ($medidas as $medida)

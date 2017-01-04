@@ -7,7 +7,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Viajes de solicitud {{ $solicitud->id }}</div>
                 <div class="panel-body">
-                    <a href="crearViaje" class="btn btn-sm btn-primary pull-right">Crear viaje</a>
+                    <a href="crearViaje" class="btn btn-xs btn-primary pull-right">Crear viaje</a>
                     <table class="table table-condensed table-hover">
                         <thead>
                             <th>Id</th>
