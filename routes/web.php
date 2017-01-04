@@ -33,6 +33,8 @@ Route::get('crearCliente', 'ClienteController@newCliente')->middleware('auth');
 Route::post('crearCliente', 'ClienteController@create')->middleware('auth');
 Route::get('clientes', 'ClienteController@clientes')->middleware('auth');
 Route::get('borrarCliente/{id}', 'ClienteController@destroy')->middleware('auth');
+Route::get('editarCliente/{id}', 'ClienteController@consultar')->middleware('auth');
+Route::post('editarCliente/{id}', 'ClienteController@editar')->middleware('auth');
 
 Route::get('crearEstado', 'EstadoController@newEstado')->middleware('auth');
 Route::post('crearEstado', 'EstadoController@create')->middleware('auth');

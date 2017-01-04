@@ -11,21 +11,14 @@
                         <thead>
                             <th>Id</th>
                             <th>Nombre</th>
-                            <th>Teléfono</th>
-                            <th>Dirección</th>
-                            <th>Contacto</th>
-                            <th>Email</th>
-                            <th><a href="crearCliente" class="btn btn-primary pull-right">Crear Cliente</a></th>
+                            <th><a href="crearCliente" class="btn btn-xs btn-primary pull-right">Crear Cliente</a></th>
                         </thead>
                         <tbody>
                             @foreach ($clientes as $cliente)
                                 <tr>
                                     <td>{{ $cliente->id }}</td>
                                     <td>{{ $cliente->nombre }}</td>
-                                    <td>{{ $cliente->telefono }}</td>
-                                    <td>{{ $cliente->direccion }}</td>
-                                    <td>{{ $cliente->contacto }}</td>
-                                    <td>{{ $cliente->email }}</td>
+                                    <td><a class="btn btn-xs btn-success pull-right" href="editarCliente/{{ $cliente->id }}">Editar</a></td>
                                     <td><a class="btn btn-xs btn-danger pull-right" href="borrarCliente/{{ $cliente->id }}">Borrar</a></td>
                                 </tr>
                             @endforeach

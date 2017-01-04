@@ -59,4 +59,37 @@ class ClienteController extends Controller
         
         return redirect('clientes');
     }
+
+    protected function consultar(Request $request, $id)
+    {
+        $cliente = Cliente::where('id',$id)->first();
+
+        return view('pages.editarCliente', compact('cliente')); 
+    }
+
+    protected function editar(Request $request, $id)
+    {
+        $cliente = Cliente::where('id',$id)->first();
+
+        $this->validate($request, [
+            'nit'        => 'required|unique:clientes|max:12|min:6',
+            'nombre'    => 'required',
+            'telefono'  => 'required',
+            'direccion' => 'required',
+            'contacto'  => 'required',
+            'email'     => 'required|email'
+        ]);
+
+        $cliente->nit        = $request->nit;
+        $cliente->nombre     = $request->nombre;
+        $cliente->telefono   = $request->telefono;
+        $cliente->direccion  = $request->direccion;
+        $cliente->contacto   = $request->contacto;
+        $cliente->email      = $request->email;
+
+        $cliente->save();
+
+        return redirect('editarCliente/' . $cliente->id);
+
+    }
 }
