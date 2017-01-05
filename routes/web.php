@@ -63,6 +63,8 @@ Route::post('crearSolicitud', 'SolicitudesController@create')->middleware('auth'
 Route::get('solicitudes', 'SolicitudesController@solicitudes')->middleware('auth');
 Route::get('solicitud/{id}/cambiarEstado', 'SolicitudesController@cambiarEstado')->middleware('auth');
 Route::post('solicitud/{id}/cambiar', 'SolicitudesController@cambiar')->middleware('auth');
+Route::get('solicitud/{id}/editar', 'SolicitudesController@editarForm')->middleware('auth');
+Route::post('solicitud/{id}/editar', 'SolicitudesController@editar')->middleware('auth');
 
 Route::get('solicitud/{id}/viajes', 'ViajesController@viajes')->middleware('auth');
 Route::get('solicitud/{id}/crearViaje', 'ViajesController@newViaje')->middleware('auth');

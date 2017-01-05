@@ -76,4 +76,37 @@ class SolicitudesController extends Controller
         
         return redirect('solicitudes');
     }
+
+    protected function editarForm(Request $request, $id)
+    {
+        $solicitud = Solicitud::where('id',$id)->first();
+        $mercancias = Mercancia::All();
+        $estados    = Estado::All();
+        $clientes   = Cliente::All();
+
+        return view('pages.editarSolicitud', compact('solicitud', 'mercancias', 'estados', 'clientes'));
+    }
+
+    protected function editar(Request $request, $id)
+    {
+        $solicitud = Solicitud::where('id',$id)->first();
+
+        $this->validate($request, [
+            'cliente'       => 'required',
+            'mercancia'     => 'required',
+            'cantidad'      => 'required',
+            'estado'        => 'required'
+        ]);
+
+        $cliente = Cliente::where('nombre', $request->cliente)->first();
+
+        $solicitud->id_cliente      = $cliente->id;
+        $solicitud->mercancia       = $request->mercancia;
+        $solicitud->cantidad        = $request->cantidad;
+        $solicitud->estado          = $request->estado;
+        
+        $solicitud->save();
+
+        return redirect('solicitudes');
+    }
 }
