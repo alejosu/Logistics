@@ -8,6 +8,7 @@
                 <div class="panel-heading">Historial del Vehículo {{ $vehiculo->placa }}</div>
                 <div class="panel-body">
                     <a href="crearHistorial/{{ $vehiculo->id }}" class="btn btn-xs btn-primary pull-right">Nueva</a>
+                    <a href=" {{ URL::previous() }}" class="btn btn-xs btn-primary">Volver</a>
                     <table class="table table-condensed table-hover">
                         <thead>
                             <th>Id</th>

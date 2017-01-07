@@ -20,9 +20,9 @@
                                     <td>{{ $vehiculo->id }}</td>
                                     <td>{{ $vehiculo->placa }}</td>
                                     <td>{{ $vehiculo->activo }}</td>
-                                    <td><a class="btn btn-xs btn-success" href="editarVehiculo/{{ $vehiculo->id }}"><span class="glyphicon glyphicon-pencil"></span></a></td>
-                                    <td><a class="btn btn-xs btn-danger" href="borrarVehiculo/{{ $vehiculo->id }}"><span class="glyphicon glyphicon-off"></span></a></td>
-                                    <td><a class="btn btn-xs btn-primary" href="historial/{{ $vehiculo->id }}"><span class="glyphicon glyphicon-eye-open"></span></a></td>
+                                    <td><a class="btn btn-xs btn-success" href="editarVehiculo/{{ $vehiculo->id }}" data-toggle="tooltip" data-placement="left"  title="Editar">E</a></td>
+                                    <td><a class="btn btn-xs btn-danger" href="borrarVehiculo/{{ $vehiculo->id }}" data-toggle="tooltip" data-placement="left"  title="Borrar">B</a></td>
+                                    <td><a class="btn btn-xs btn-primary" href="historial/{{ $vehiculo->id }}" data-toggle="tooltip" data-placement="left"  title="Historial">H</a></td>
                                 </tr>
                             @endforeach
                         </tbody>

@@ -6,7 +6,10 @@
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
                 <div class="panel-heading">Viajes de solicitud {{ $solicitud->id }}</div>
-                <div class="panel-heading"><a href="crearViaje" class="btn btn-xs btn-primary pull-right">Crear viaje</a></div>                
+                <div class="panel-heading">
+                  <a href="crearViaje" class="btn btn-xs btn-primary pull-right">Crear</a>
+                  <a href="{{ URL::previous() }}" class="btn btn-xs btn-primary">Volver</a>
+                </div>
                 <div class="panel-body">
                     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                         

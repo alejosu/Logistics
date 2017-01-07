@@ -11,7 +11,7 @@
                         <thead>
                             <th>Id</th>
                             <th>Nombre</th>
-                            <th><a href="crearCliente" class="btn btn-xs btn-primary pull-right">Crear Cliente</a></th>
+                            <th><a href="crearCliente" class="btn btn-xs btn-primary pull-right">Crear</a></th>
                         </thead>
                         <tbody>
                             @foreach ($clientes as $cliente)

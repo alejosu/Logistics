@@ -18,7 +18,7 @@
                                 <tr>
                                     <td>{{ $ciudad->id }}</td>
                                     <td>{{ $ciudad->nombre }}</td>
-                                    <td><a class="btn btn-xs btn-danger pull-right" href="borrarCiudad/{{ $ciudad->id }}">Borrar</a></td>
+                                    <td><a class="btn btn-xs btn-danger pull-right" href="borrarCiudad/{{ $ciudad->id }}" data-toggle="tooltip" data-placement="left"  title="Borrar">B</a></td>
                                 </tr>
                             @endforeach
                         </tbody>
