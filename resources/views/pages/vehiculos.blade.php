@@ -7,7 +7,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Listado de Vehículos</div>
                 <div class="panel-body">
-                    <a href="crearVehiculo" class="btn btn-xs btn-primary pull-right">Crear</a>
+                    <a href="crearVehiculo" class="btn btn-xs btn-primary pull-right glyphicon glyphicon-plus"></a>
                     <table class="table table-condensed table-hover">
                         <thead>
                             <th>Id</th>
@@ -20,9 +20,9 @@
                                     <td>{{ $vehiculo->id }}</td>
                                     <td>{{ $vehiculo->placa }}</td>
                                     <td>{{ $vehiculo->activo }}</td>
-                                    <td><a class="btn btn-xs btn-success" href="editarVehiculo/{{ $vehiculo->id }}" data-toggle="tooltip" data-placement="left"  title="Editar">E</a></td>
-                                    <td><a class="btn btn-xs btn-danger" href="borrarVehiculo/{{ $vehiculo->id }}" data-toggle="tooltip" data-placement="left"  title="Borrar">B</a></td>
-                                    <td><a class="btn btn-xs btn-primary" href="historial/{{ $vehiculo->id }}" data-toggle="tooltip" data-placement="left"  title="Historial">H</a></td>
+                                    <td><a class="btn btn-xs btn-success glyphicon glyphicon-pencil" href="editarVehiculo/{{ $vehiculo->id }}" data-toggle="tooltip" data-placement="left"  title="Editar"></a></td>
+                                    <td><a class="btn btn-xs btn-danger glyphicon glyphicon-trash" href="borrarVehiculo/{{ $vehiculo->id }}" data-toggle="tooltip" data-placement="left"  title="Borrar"></a></td>
+                                    <td><a class="btn btn-xs btn-primary glyphicon glyphicon-list-alt" href="historial/{{ $vehiculo->id }}" data-toggle="tooltip" data-placement="left"  title="Historial"></a></td>
                                 </tr>
                             @endforeach
                         </tbody>

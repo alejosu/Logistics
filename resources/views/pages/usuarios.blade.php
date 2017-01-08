@@ -19,8 +19,8 @@
                                     <td>{{ $usuario->id }}</td>
                                     <td>{{ $usuario->name }}</td>
                                     <td>{{ $usuario->cliente->nombre }}</td>
-                                    <td><a class="btn btn-xs btn-success pull-right" href="borrarusuario/{{ $usuario->id }}" data-toggle="tooltip" data-placement="left"  title="Editar">E</a></td>
-                                    <td><a class="btn btn-xs btn-danger pull-right" href="borrarusuario/{{ $usuario->id }}" data-toggle="tooltip" data-placement="left"  title="Borrar">B</a></td>
+                                    <td><a class="btn btn-xs btn-success pull-right glyphicon glyphicon glyphicon-edit" href="borrarusuario/{{ $usuario->id }}" data-toggle="tooltip" data-placement="left"  title="Editar"></a></td>
+                                    <td><a class="btn btn-xs btn-danger pull-right glyphicon glyphicon-trash" href="borrarusuario/{{ $usuario->id }}" data-toggle="tooltip" data-placement="left"  title="Borrar"></a></td>
                                 </tr>
                             @endforeach
                         </tbody>

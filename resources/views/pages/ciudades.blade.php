@@ -18,7 +18,8 @@
                                 <tr>
                                     <td>{{ $ciudad->id }}</td>
                                     <td>{{ $ciudad->nombre }}</td>
-                                    <td><a class="btn btn-xs btn-danger pull-right" href="borrarCiudad/{{ $ciudad->id }}" data-toggle="tooltip" data-placement="left"  title="Borrar">B</a></td>
+                                    <td><a class="btn btn-xs btn-success pull-right glyphicon glyphicon-pencil" href="editarCiudad/{{ $ciudad->id }}" data-toggle="tooltip" data-placement="left"  title="Editar"></a></td>
+                                    <td><a class="btn btn-xs btn-danger pull-right glyphicon glyphicon-trash" href="borrarCiudad/{{ $ciudad->id }}" data-toggle="tooltip" data-placement="left"  title="Borrar"></a></td>
                                 </tr>
                             @endforeach
                         </tbody>

@@ -18,8 +18,8 @@
                                 <tr>
                                     <td>{{ $cliente->id }}</td>
                                     <td>{{ $cliente->nombre }}</td>
-                                    <td><a class="btn btn-xs btn-success pull-right" href="editarCliente/{{ $cliente->id }}">Editar</a></td>
-                                    <td><a class="btn btn-xs btn-danger pull-right" href="borrarCliente/{{ $cliente->id }}">Borrar</a></td>
+                                    <td><a class="btn btn-xs btn-success pull-right glyphicon glyphicon-pencil" href="editarCliente/{{ $cliente->id }}"></a></td>
+                                    <td><a class="btn btn-xs btn-danger pull-right glyphicon glyphicon-trash" href="borrarCliente/{{ $cliente->id }}"></a></td>
                                 </tr>
                             @endforeach
                         </tbody>

@@ -18,8 +18,8 @@
                                 <tr>
                                     <td>{{ $mercancia->id }}</td>
                                     <td>{{ $mercancia->descripcion }}</td>
-                                    <td><a class="btn btn-xs btn-success pull-right" href="editarMercancia/{{ $mercancia->id }}" data-toggle="tooltip" data-placement="left"  title="Editar">E</a></td>
-                                    <td><a class="btn btn-xs btn-danger pull-right" href="borrarMercancia/{{ $mercancia->id }}" data-toggle="tooltip" data-placement="left"  title="Borrar">B</a></td>
+                                    <td><a class="btn btn-xs btn-success pull-right glyphicon glyphicon-pencil" href="editarMercancia/{{ $mercancia->id }}" data-toggle="tooltip" data-placement="left"  title="Editar"></a></td>
+                                    <td><a class="btn btn-xs btn-danger pull-right glyphicon glyphicon-trash" href="borrarMercancia/{{ $mercancia->id }}" data-toggle="tooltip" data-placement="left"  title="Borrar"></a></td>
                                 </tr>
                             @endforeach
                         </tbody>
