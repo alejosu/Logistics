@@ -5,20 +5,20 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Crear Medida</div>
+                <div class="panel-heading">Crear Historial</div>
                 <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="{{ url('crearMedida') }}">
+                    <form class="form-horizontal" role="form" method="POST" action="{{ url('historial/'. $vehiculo->id . '/crearHistorial') }}">
                         {{ csrf_field() }}
-
-                        <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                            <label for="name" class="col-md-4 control-label">Descripción</label>
+                        
+                        <div class="form-group{{ $errors->has('anotacion') ? ' has-error' : '' }}">
+                            <label for="anotacion" class="col-md-4 control-label">Anotacion</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control" name="descripcion" value="{{ old('descripcion') }}" required autofocus>
+                                <input id="anotacion" type="text" class="form-control" name="anotacion" value="{{ old('anotacion') }}" required autofocus>
 
-                                @if ($errors->has('descripcion'))
+                                @if ($errors->has('anotacion'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('descripcion') }}</strong>
+                                        <strong>{{ $errors->first('anotacion') }}</strong>
                                     </span>
                                 @endif
                             </div>

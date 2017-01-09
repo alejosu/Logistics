@@ -64,4 +64,33 @@ class MercanciaController extends Controller
         return redirect('mercancias');
     }
 
+    protected function consultar(Request $request, $id)
+    {
+        $mercancia  = Mercancia::where('id', $id)->first();
+        $medidas    = Medida::All();
+
+        return view('pages.editarMercancia', compact('mercancia', 'medidas')); 
+    }
+
+    protected function editar(Request $request, $id)
+    {
+        $mercancia = Mercancia::where('id',$id)->first();
+
+        $this->validate($request, [
+            'descripcion'   => 'required',
+            'medida'        => 'required'
+        ]);
+
+        $mercancia->descripcion = $request->descripcion;
+        $mercancia->medida      = $request->medida;
+        if($request->observaciones != null)
+        {
+            $mercancia->observaciones = $request->observaciones;
+        }
+        $mercancia->save();
+
+        return redirect('mercancias');
+
+    }
+
 }

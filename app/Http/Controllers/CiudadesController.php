@@ -50,4 +50,27 @@ class CiudadesController extends Controller
 
         return redirect('ciudades');
     }
+
+    protected function consultar(Request $request, $id)
+    {
+        $ciudad = Cod_Ciudad::where('id', $id)->first();
+
+        return view('pages.editarCiudad', compact('ciudad')); 
+    }
+
+    protected function editar(Request $request, $id)
+    {
+        $ciudad = Cod_Ciudad::where('id',$id)->first();
+
+        $this->validate($request, [
+            'nombre'        => 'required'
+        ]);
+
+        $ciudad->nombre = $request->nombre;
+
+        $ciudad->save();
+
+        return redirect('ciudades');
+
+    }
 }

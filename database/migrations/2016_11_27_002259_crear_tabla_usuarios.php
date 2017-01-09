@@ -20,6 +20,8 @@ class CrearTablaUsuarios extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->integer('id_cliente')->unsigned();
+            $table->string('admin');
+            $table->string('activo');
             $table->rememberToken();
             $table->timestamps();
 

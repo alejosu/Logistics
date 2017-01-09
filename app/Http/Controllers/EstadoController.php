@@ -49,4 +49,27 @@ class EstadoController extends Controller
         
         return redirect('estados');
     }
+
+    protected function consultar(Request $request, $id)
+    {
+        $estado = Estado::where('id', $id)->first();
+
+        return view('pages.editarEstado', compact('estado')); 
+    }
+
+    protected function editar(Request $request, $id)
+    {
+        $estado = Estado::where('id',$id)->first();
+
+        $this->validate($request, [
+            'descripcion'        => 'required'
+        ]);
+
+        $estado->descripcion = $request->descripcion;
+
+        $estado->save();
+
+        return redirect('estados');
+
+    }
 }

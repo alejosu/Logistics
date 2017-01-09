@@ -96,6 +96,7 @@
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
+                                <a href="{{ URL::previous() }}" class="btn btn-xs btn-default" >Cancelar</a>
                                 <button type="submit" class="btn btn-primary btn-xs">
                                     Crear
                                 </button>
