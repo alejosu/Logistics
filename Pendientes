@@ -1,2 +1,8 @@
-- Cambiar las tablas por forms para que sea responsive.
-- Habilitar la edicion de registros.
+* Observaciones para los envíos 
+* Cambio de estado para los envíos
+* Manejo de imagenes para manifiesto
+* Control de menus para usuarios cliente
+* Validación de cantidad de envíos contra solicitud
+* Validación de cantidad en envío contra capacidad de vehículo
+* Tabla de control de solicitudes
+* Módulo de usuario final

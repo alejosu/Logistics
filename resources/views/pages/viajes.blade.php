@@ -24,12 +24,20 @@
                             </div>
                             <div id="{{ $viaje->id }}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading{{ $viaje->id }}">
                               <div class="panel-body">
-                                <strong>Estado: </strong> {{ $viaje->estado }} <br>
-                                <strong>Cantidad: </strong>{{ $viaje->cantidad }} {{ $viaje->medida }} <br>
-                                <strong>Placa: </strong> {{ $viaje->placa }} <br>
-                                <strong>Fecha Salida: </strong> {{ $viaje->fecha_salida }} <br>
-                                <strong>Fecha Entrega: </strong> {{ $viaje->fecha_entrega}} <br>
-                                <strong>Destinatario: </strong> {{ $viaje->destinatario }}
+                                <div class="col-xs-8">
+                                  <strong>Estado: </strong> {{ $viaje->estado }} <br>
+                                  <strong>Cantidad: </strong>{{ $viaje->cantidad }} {{ $viaje->medida }} <br>
+                                  <strong>Placa: </strong> {{ $viaje->placa }} <br>
+                                  <strong>Fecha Salida: </strong> {{ $viaje->fecha_salida }} <br>
+                                  <strong>Fecha Entrega: </strong> {{ $viaje->fecha_entrega}} <br>
+                                  <strong>Destinatario: </strong> {{ $viaje->destinatario }}
+                                </div>
+                                <div class="col-xs-4">
+                                  <ul class="list-unstyled list-inline">
+                                    <li><a href="/solicitud/{{$viaje->id_solicitud}}/viaje/{{$viaje->id}}" class="btn btn-xs btn-success glyphicon glyphicon-edit pull-right"></a></li>
+                                    <li><a href="" class="btn btn-xs btn-primary glyphicon glyphicon-list pull-right"></a></li>
+                                  </ul>
+                                </div>
                               </div>
                             </div>
                           </div>
