@@ -77,7 +77,7 @@ class viajesController extends Controller
         return view('pages.crearViaje', compact('estados', 'vehiculos', 'solicitud', 'destinatario', 'ciudades', 'medidas'));
     }
 
-    protected function editar()
+    protected function editarEstado()
     {
         $estados = Estado::all();
 
@@ -89,6 +89,57 @@ class viajesController extends Controller
         $viaje = Viaje::where('id', $id)->first();
 
         $viaje->estado = $request->estado;
+
+        $viaje->save();
+
+        return redirect('solicitud/' . $viaje->id_solicitud . '/viajes');
+    }
+
+    protected function consulta(Request $request, $idViaje)
+    {
+        $viaje = Viaje::where('id', $idViaje)->first();
+        $solicitud = Solicitud::where('id', $viaje->id_solicitud)->first();
+        $estados    = Estado::All();
+        $vehiculos  = Vehiculo::where('activo', 1)->get();
+        $destinatario = Cliente::All();
+        $ciudades   = Cod_Ciudad::All();
+        $medidas    = Medida::All();
+
+
+        return view('pages.editarViaje', compact('viaje', 'solicitud', 'estados', 'vehiculos', 'destinatario', 'ciudades', 'medidas'));
+    }
+
+    protected function editar(Request $request, $idViaje)
+    {
+        $this->validate($request, [
+            'cantidad'      => 'required',
+            'fecha_salida'  => 'required',
+            'fecha_entrega' => 'required',
+            'manifiesto'    => 'required',
+            'placa'         => 'required',
+            'origen'        => 'required',
+            'destino'       => 'required',
+            'medida'        => 'required',
+            'destinatario'  => 'required', 
+            'dir_origen'    => 'required',
+            'dir_destino'   => 'required',
+            'estado'        => 'required'          
+        ]);
+
+        $viaje = Viaje::where('id', $idViaje)->first();
+
+        $viaje->cantidad       = $request->cantidad;
+        $viaje->fecha_salida   = $request->fecha_salida;
+        $viaje->fecha_entrega  = $request->fecha_entrega;
+        $viaje->manifiesto     = $request->manifiesto;
+        $viaje->placa          = $request->placa;
+        $viaje->origen         = $request->origen;
+        $viaje->destino        = $request->destino;
+        $viaje->medida         = $request->medida;
+        $viaje->destinatario   = $request->destinatario;
+        $viaje->dir_origen     = $request->dir_origen;
+        $viaje->dir_destino    = $request->dir_destino;
+        $viaje->estado         = $request->estado;
 
         $viaje->save();
 
