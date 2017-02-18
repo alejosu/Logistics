@@ -82,6 +82,10 @@ Route::post('solicitud/{id}/crearViaje', 'ViajesController@create')->middleware(
 Route::get('solicitud/{id}/viaje/{idViaje}', 'ViajesController@consulta')->middleware('auth');
 Route::post('solicitud/{id}/viaje/{idViaje}', 'ViajesController@editar')->middleware('auth');
 Route::post('viaje/{id}/cambiarEstado', 'ViajesController@cambiarEstado')->middleware('auth');
+Route::post('solicitud/{id}/viaje/{idViaje}/crearDetalle', 'ViajesController@crearDetalle')->middleware('auth');
+Route::get('solicitud/{id}/viaje/{idViaje}/detalles', 'ViajesController@detalles')->middleware('auth');
+Route::get('solicitud/{id}/viaje/{idViaje}/{idDetalle}', 'ViajesController@consultaDetalle')->middleware('auth');
+Route::post('solicitud/{id}/viaje/{idViaje}/{idDetalle}', 'ViajesController@editarDetalle')->middleware('auth');
 
 
 Route::get('historial/{id_vehiculo}/crearHistorial', 'HistorialController@newHistorial')->middleware('auth');
