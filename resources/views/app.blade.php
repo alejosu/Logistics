@@ -69,7 +69,7 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @if (Auth::check())
-                        <a href="{{ url('/app') }}">Bienvenido</a>
+                        <a href="{{ url('/desktop') }}">Escritorio</a>
                     @else
                         <a href="{{ url('/login') }}">Ingresar</a>
                         <a href="{{ url('/register') }}">Registrarse</a>
@@ -82,13 +82,13 @@
                     Logistics
                 </div>
 
-                <!-- <div class="links">
+                <div class="links">
                     <a href="solicitudes">Solicitudes</a>
                     <a href="#">Consultas</a>
                     <a href="#">Tracking</a>
                     <a href="#">Administración</a>
                     <a href="#">Contacto</a>
-                </div> -->
+                </div>
             </div>
         </div>
     </body>

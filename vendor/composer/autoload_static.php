@@ -278,6 +278,7 @@ class ComposerStaticInitf69185675446f687f208459337c05ccb
     );
 
     public static $classMap = array (
+        'ConfiguracionVehiculos' => __DIR__ . '/../..' . '/database/migrations/2017_03_05_152652_configuracion_vehiculos.php',
         'CrearTablaClientes' => __DIR__ . '/../..' . '/database/migrations/2016_11_27_002139_crear_tabla_clientes.php',
         'CrearTablaCodCiudades' => __DIR__ . '/../..' . '/database/migrations/2016_11_27_002607_crear_tabla_cod_ciudades.php',
         'CrearTablaEmpresas' => __DIR__ . '/../..' . '/database/migrations/2016_11_27_002655_crear_tabla_empresas.php',
@@ -290,18 +291,6 @@ class ComposerStaticInitf69185675446f687f208459337c05ccb
         'CrearTablaUsuarios' => __DIR__ . '/../..' . '/database/migrations/2016_11_27_002259_crear_tabla_usuarios.php',
         'CrearTablaVehiculo' => __DIR__ . '/../..' . '/database/migrations/2016_11_27_004602_crear_tabla_vehiculo.php',
         'CrearTablaViajes' => __DIR__ . '/../..' . '/database/migrations/2016_11_27_004736_crear_tabla_viajes.php',
-        'CreateClientesTable' => __DIR__ . '/../..' . '/database/migrations/migrationsOld/2016_11_26_172109_create_clientes_table.php',
-        'CreateCodCiudadesTable' => __DIR__ . '/../..' . '/database/migrations/migrationsOld/2016_11_26_180132_create_cod_ciudades_table.php',
-        'CreateEmpresaTable' => __DIR__ . '/../..' . '/database/migrations/migrationsOld/2016_11_26_175128_create_empresa_table.php',
-        'CreateEstadosTable' => __DIR__ . '/../..' . '/database/migrations/migrationsOld/2016_11_26_173611_create_estados_table.php',
-        'CreateHistorialVehicleTable' => __DIR__ . '/../..' . '/database/migrations/migrationsOld/2016_11_26_171035_create_historial_vehicle_table.php',
-        'CreateMedidasTable' => __DIR__ . '/../..' . '/database/migrations/migrationsOld/2016_11_26_180302_create_medidas_table.php',
-        'CreateMercanciasTable' => __DIR__ . '/../..' . '/database/migrations/migrationsOld/2016_11_26_173800_create_mercancias_table.php',
-        'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/migrationsOld/2014_10_12_100000_create_password_resets_table.php',
-        'CreateSolicitudesTable' => __DIR__ . '/../..' . '/database/migrations/migrationsOld/2016_11_26_171338_create_solicitudes_table.php',
-        'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/migrationsOld/2014_10_12_000000_create_users_table.php',
-        'CreateVehicleTable' => __DIR__ . '/../..' . '/database/migrations/migrationsOld/2016_11_26_163429_create_vehicle_table.php',
-        'CreateViajesTable' => __DIR__ . '/../..' . '/database/migrations/migrationsOld/2016_11_26_172508_create_viajes_table.php',
         'DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeds/DatabaseSeeder.php',
         'File_Iterator' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Iterator.php',
         'File_Iterator_Facade' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Facade.php',

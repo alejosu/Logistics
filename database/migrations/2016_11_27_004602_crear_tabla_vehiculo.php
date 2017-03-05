@@ -21,6 +21,7 @@ class CrearTablaVehiculo extends Migration
             $table->string('id_conductor');
             $table->decimal('capacidad',5,2);
             $table->boolean('activo');
+            $table->integer('codigo');
             $table->timestamps();
         });
     }

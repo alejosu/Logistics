@@ -11,7 +11,7 @@
                         {{ csrf_field() }}
                         
                         <div class="form-group{{ $errors->has('placa') ? ' has-error' : '' }}">
-                            <label for="placa" class="col-md-4 control-label">PLaca</label>
+                            <label for="placa" class="col-md-4 control-label">Placa</label>
 
                             <div class="col-md-6">
                                 <input id="placa" type="text" class="form-control" name="placa" value="{{ old('placa') }}" required autofocus>
@@ -19,6 +19,24 @@
                                 @if ($errors->has('placa'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('placa') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group{{ $errors->has('codigo') ? ' has-error' : '' }}">
+                            <label for="codigo" class="col-md-4 control-label">Código</label>
+
+                            <div class="col-md-6">
+                                <select class="form-control" id="codigo" name="codigo">
+                                    @foreach($codigos as $codigo)
+                                        <option>{{$codigo->codigo}}. " " . {{$codigo->nombre}}</option>
+                                    @endforeach
+                                </select>
+
+                                @if ($errors->has('codigo'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('codigo') }}</strong>
                                     </span>
                                 @endif
                             </div>

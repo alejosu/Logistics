@@ -13,7 +13,8 @@ class Vehiculo extends Model
         'conductor',
         'id_conductor',
         'capacidad',
-        'activo'
+        'activo',
+        'codigo'
     ];
 	
     public function historial()

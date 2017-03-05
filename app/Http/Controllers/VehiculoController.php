@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Vehiculo;
 use App\Historial_vehiculo;
+use App\Conf_vehiculos;
 
 class VehiculoController extends Controller
 {
@@ -21,7 +22,8 @@ class VehiculoController extends Controller
             'placa'     	=> 'required|unique:vehiculo|max:6|min:6',
             'conductor' 	=> 'required|min:2',
             'id_conductor'  => 'required|min:2',
-            'capacidad' 	=> 'required'
+            'capacidad' 	=> 'required',
+            'codigo'        => 'required'
         ]);
 
         if($request->activo == 'Inactivo')
@@ -38,7 +40,8 @@ class VehiculoController extends Controller
             'conductor' 	=> $request->conductor,
             'id_conductor'  => $request->id_conductor,
             'capacidad' 	=> $request->capacidad,
-            'activo'        => $activo
+            'activo'        => $activo,
+            'codigo'        => $request->codigo
         ]);
 
         $anotacion = New Historial_vehiculo();
@@ -64,7 +67,9 @@ class VehiculoController extends Controller
 
     protected function newVehiculo()
     {
-    	return view('pages.crearVehiculo');
+        $codigos = new Conf_vehiculos::all();
+
+    	return view('pages.crearVehiculo', compact('codigos'));
     }
 
     protected function destroy(Request $request, $id)

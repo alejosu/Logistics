@@ -17,7 +17,9 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+Route::get('/app', 'HomeController@index');
+
+Route::get('/desktop', 'HomeController@desktop');
 
 Route::get('crearMedida', 'MedidaController@newMedida')->middleware('auth');
 Route::post('crearMedida', 'MedidaController@create')->middleware('auth');

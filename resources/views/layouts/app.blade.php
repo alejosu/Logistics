@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Logistics') }}</title>
 
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
@@ -37,7 +37,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                        {{ config('app.name', 'Logistics') }}
                     </a>
                 </div>
 
@@ -54,14 +54,20 @@
                             <li><a href="{{ url('/login') }}">Ingresar</a></li>
                             <li><a href="{{ url('/register') }}">Registrarse</a></li>
                         @else
-                            <li><a href="/home">Home</a></li>
-                            <li><a href="/clientes">Clientes</a></li>
-                            <li><a href="/vehiculos">Vehículos</a></li>
-                            <li><a href="/medidas">Medidas</a></li>
-                            <li><a href="/ciudades">Ciudades</a></li>
-                            <li><a href="/estados">Estados</a></li>
-                            <li><a href="/mercancias">Mercancías</a></li>
-                            <li><a href="/usuarios">Usuarios</a></li>
+                            <li><a href="/desktop">Escritorio</a></li>    
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Configuración <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/clientes">Clientes</a></li>
+                                    <li><a href="/vehiculos">Vehículos</a></li>
+                                    <li><a href="/medidas">Medidas</a></li>
+                                    <li><a href="/ciudades">Ciudades</a></li>
+                                    <li><a href="/estados">Estados</a></li>
+                                    <li><a href="/mercancias">Mercancías</a></li>
+                                    <li><a href="/usuarios">Usuarios</a></li>
+                                </ul>
+                            </li>                        
+                            
                             <li><a href="/solicitudes">Solicitudes</a></li>
                             <li class="dropdown">
 
